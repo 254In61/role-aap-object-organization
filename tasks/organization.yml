@@ -1,0 +1,7 @@
+---
+# Build organization
+- name: organization.yml - Create organization object
+  ansible.controller.organization:
+    name: "{{ organization_name }}"
+    description: "{{ common_description }}"
+    state: present

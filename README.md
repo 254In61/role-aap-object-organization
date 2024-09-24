@@ -1,2 +1,2 @@
-# role-aap-object-organization
-Ansible role to build organization object
+# role-aap-object-credential
+Ansible role to build AAP credential objects

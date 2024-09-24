@@ -1,0 +1,4 @@
+---
+- name: Import organization tasks
+  ansible.builtin.import_tasks: organization.yml
+  when: organization | bool
