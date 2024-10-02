@@ -42,3 +42,8 @@ Step 3: Call the role from your playbook.
         organization: "{{ organization_name }}"
     !
     !
+
+# Author
+Name: Allan Maseghe
+
+Email: amaseghe@redhat.com
