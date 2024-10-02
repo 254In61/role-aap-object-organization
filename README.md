@@ -18,32 +18,9 @@ Step 2: Define your variables in the structure below
 Step 3: Call the role from your playbook.
 
 # Example
+## vars
+example-vars.yml
 
 ## playbook
+example-playbook.yml
 
----
-- name: Playbook to configure AAP
-  hosts: localhost
-  gather_facts: false
- 
-  pre_tasks:
-    - name: Include specific project variables
-      ansible.builtin.include_vars:
-        dir: group_vars
-
-  tasks:
-    !
-    !
-    - name: Import role-aap-object-organization
-      ansible.builtin.import_role:
-        name: role-aap-object-organization
-      vars:
-        build: false
-        organization: "{{ organization_name }}"
-    !
-    !
-
-# Author
-Name: Allan Maseghe
-
-Email: amaseghe@redhat.com

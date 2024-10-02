@@ -1,0 +1,21 @@
+---
+- name: Playbook to configure AAP
+  hosts: localhost
+  gather_facts: false
+ 
+  pre_tasks:
+    - name: Include specific project variables
+      ansible.builtin.include_vars:
+        dir: group_vars
+
+  tasks:
+    !
+    !
+    - name: Import role-aap-object-organization
+      ansible.builtin.import_role:
+        name: role-aap-object-organization
+      vars:
+        build: false
+        organization: "{{ organization_name }}"
+    !
+    !
